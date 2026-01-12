@@ -1,0 +1,27 @@
+<mat-sidenav-container class="container">
+
+  <mat-sidenav mode="side" opened>
+    <h3 class="menu-title">Notifications</h3>
+
+    <a mat-button routerLink="/submit" routerLinkActive="active">
+      <mat-icon>send</mat-icon>
+      Send Notification
+    </a>
+
+    <a mat-button routerLink="/history" routerLinkActive="active">
+      <mat-icon>history</mat-icon>
+      Log History
+    </a>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      Notification System
+    </mat-toolbar>
+
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

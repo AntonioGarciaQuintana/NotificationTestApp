@@ -1,0 +1,45 @@
+.history-card {
+  width: 100%;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+
+  &.SPORTS  {
+    background-color: #1976d2;
+  }
+
+  &.MOVIES  {
+    background-color: #f9a825;
+  }
+
+  &.FINANCE {
+    background-color: #7d0d99;
+  }
+  
+}
+
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+
+  &.delivered {
+    background-color: #2e7d32;
+  }
+
+  &.not-delivered {
+    background-color: #c62828;
+  }
+}
