@@ -5,9 +5,9 @@
   <mat-card-content>
     <form [formGroup]="form" (ngSubmit)="submit()">
 
-      <mat-form-field appearance="outline" class="full-width">
+      <mat-form-field appearance="outline" class="full-width" >
         <mat-label>Category</mat-label>
-        <mat-select formControlName="category">
+        <mat-select formControlName="category" [errorStateMatcher]="matcher">
           <mat-option *ngFor="let c of categories" [value]="c.code">
             {{ c.code }}
           </mat-option>
@@ -17,14 +17,15 @@
 
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>Message</mat-label>
-        <textarea matInput rows="4" maxlength="500" formControlName="message">
+        <textarea matInput rows="4" maxlength="500" formControlName="message" [errorStateMatcher]="matcher">
         </textarea>
         <mat-error>Message cannot be empty</mat-error>
       </mat-form-field>
 
       <div class="actions">
         <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">
-          Send
+          <mat-spinner *ngIf="loading" diameter="20" color="accent"></mat-spinner>
+          <span *ngIf="!loading">Send</span>
         </button>
       </div>
 
